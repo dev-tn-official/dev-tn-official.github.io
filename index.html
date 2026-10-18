@@ -5,6 +5,194 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Computer Science ePortfolio</title>
+
+<style>
+    :root {
+        color-scheme: dark;
+        --background: #0d1117;
+        --surface: #161b22;
+        --border: #30363d;
+        --text: #c9d1d9;
+        --heading: #e6edf3;
+        --muted: #8b949e;
+        --accent: #58a6ff;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        margin: 0;
+        background-color: var(--background);
+        color: var(--text);
+        font-family: -apple-system, BlinkMacSystemFont,
+            "Segoe UI", Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.75;
+    }
+
+    header {
+        padding: 48px 24px 36px;
+        text-align: center;
+        border-bottom: 1px solid var(--border);
+        background-color: var(--surface);
+    }
+
+    header h1 {
+        margin: 0 0 8px;
+        color: var(--heading);
+        font-size: clamp(1.8rem, 4vw, 2.5rem);
+        line-height: 1.25;
+    }
+
+    header p {
+        margin: 0;
+        color: var(--muted);
+    }
+
+    main {
+        width: min(100% - 32px, 1000px);
+        margin: 40px auto 80px;
+    }
+
+    section {
+        margin-bottom: 28px;
+        padding: 32px;
+        background-color: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        scroll-margin-top: 24px;
+    }
+
+    h2 {
+        margin: 0 0 20px;
+        padding-bottom: 12px;
+        color: var(--heading);
+        font-size: 1.6rem;
+        line-height: 1.35;
+        border-bottom: 1px solid var(--border);
+    }
+
+    h3 {
+        margin: 30px 0 12px;
+        color: var(--heading);
+        font-size: 1.2rem;
+        line-height: 1.4;
+    }
+
+    p {
+        margin: 0 0 18px;
+    }
+
+    section > :last-child {
+        margin-bottom: 0;
+    }
+
+    a {
+        color: var(--accent);
+        text-decoration: none;
+        overflow-wrap: anywhere;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    a:focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 4px;
+        border-radius: 2px;
+    }
+
+    ul {
+        padding-left: 24px;
+    }
+
+    li {
+        margin-bottom: 10px;
+    }
+
+    iframe {
+        display: block;
+        width: 100%;
+        max-width: 800px;
+        aspect-ratio: 16 / 9;
+        height: auto;
+        margin: 24px 0;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+    }
+
+    @media (max-width: 600px) {
+        header {
+            padding: 32px 16px;
+        }
+
+        main {
+            width: min(100% - 24px, 1000px);
+            margin-top: 24px;
+        }
+
+        section {
+            padding: 22px 18px;
+        }
+
+        h2 {
+            font-size: 1.35rem;
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        html {
+            scroll-behavior: auto;
+        }
+    }
+
+
+/* Portfolio navigation */
+main > section:nth-child(2) ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+main > section:nth-child(2) li {
+    margin: 0;
+}
+
+main > section:nth-child(2) li a {
+    display: block;
+    height: 100%;
+    padding: 14px 18px;
+    background-color: var(--background);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-weight: 500;
+    transition: border-color 0.2s, background-color 0.2s;
+}
+
+main > section:nth-child(2) li a:hover {
+    background-color: #21262d;
+    border-color: var(--accent);
+    text-decoration: none;
+}
+
+@media (max-width: 600px) {
+    main > section:nth-child(2) ul {
+        grid-template-columns: 1fr;
+    }
+}
+
+</style>
+
 </head>
 
 <body>
@@ -27,7 +215,11 @@
         <section>
             <h2>Portfolio</h2>
             <ul>
-                <li>Professional Self-Assessment — Coming Soon</li>
+                <li>
+    			<a href="#professional-self-assessment">
+        			Professional Self-Assessment — Available Below
+    			</a>
+		</li>
 
 		<li>
     			<a href="#original-travlr">
@@ -59,6 +251,77 @@
 		</li>
             </ul>
         </section>
+
+        <section id="professional-self-assessment">
+            <h2>Professional Self-Assessment</h2>
+
+            <h3>Professional Background and Career Goals</h3>
+
+            <p>
+                The professional and educational background I have built over the years reflects a longstanding interest in computers and technology, along with a desire to continue developing my technical skills and pursue new career opportunities. Before enrolling in Southern New Hampshire University&#x27;s Bachelor of Science in Computer Science program in May 2024, I gained experience working with computer hardware, software troubleshooting, and technical support through previous employment as a computer repair technician. However, much of my recent professional experience has been in emergency medical services (EMS), where I have spent over ten years serving in several roles, including emergency medical technician, field training officer, dispatcher, scheduler, and clinical field supervisor. Many of these responsibilities overlapped, requiring me to balance multiple duties while maintaining effective communication and organization. These experiences have helped me develop leadership, problem-solving, and organizational skills in situations that often require quick decisions and close attention to detail. Although EMS and computer science are very different fields, I believe many of the professional skills I have developed can translate effectively into a career in information technology.
+            </p>
+
+            <p>
+                I initially pursued my computer science degree to build upon my existing interest in technology and establish a stronger technical foundation for a career transition. Throughout the program, I have gained exposure to software development, algorithms and data structures, database management, security, and other areas of computing. Studying the software development life cycle (SDLC) and Agile methodologies has also helped me better understand how software projects are planned, organized, developed, tested, and maintained. Additionally, working with different programming languages and application types has broadened my understanding of the opportunities available throughout the technology industry. Although the degree program has emphasized software development, my interests have increasingly shifted toward system and network administration, particularly working with operating systems, servers, networking infrastructure, and troubleshooting. My goal is to combine the technical knowledge gained through my education with the communication, leadership, and practical problem-solving skills developed throughout my professional career. I recognize that continued hands-on experience and specialized training will be important as I pursue this transition, but I believe completing the computer science program represents an important step toward becoming a well-rounded IT professional.
+            </p>
+
+            <h3>Academic Growth and Technical Development</h3>
+
+            <p>
+                Throughout my computer science program, I have had opportunities to work with several programming languages, development environments, and types of applications, each presenting different challenges and learning experiences. One of the most substantial projects involved developing the Travlr Getaways full-stack web application using the MEAN stack, which incorporates MongoDB, Express, Angular, and Node.js. This project helped me better understand how the frontend, backend, and database components of an application communicate and work together. Another memorable assignment involved developing an Android application in Java through a different integrated development environment (IDE) that combined traditional programming with visual interface design tools. This experience introduced additional considerations involving user interface planning, application functionality, and designing an experience that would be practical for the intended user. I also worked with OpenGL in my Computer Graphics and Visualization course to construct a three-dimensional scene, providing exposure to graphics programming and the mathematical concepts involved in rendering objects. Although these projects differed significantly in their technologies and objectives, they helped broaden my understanding of software development and reinforced the importance of adapting to unfamiliar tools and technical requirements.
+            </p>
+
+            <p>
+                Perhaps one of the most important lessons I learned throughout the program was the value of approaching development incrementally and testing functionality frequently. Earlier in my education, it was easy to underestimate how much trouble a seemingly minor syntax error or unexpected interaction between components could cause. As assignments became more complex, I developed a greater appreciation for breaking larger tasks into manageable segments, verifying that individual components worked as expected, and testing changes before proceeding further. This became particularly apparent during my Travlr Getaways capstone enhancements, when a seemingly straightforward change to how the backend retrieved a trip record unexpectedly caused problems with the Angular editing interface. Resolving the issue required tracing how information was passed between application components and ensuring that the frontend and backend expected the same data structure. Although incremental development and testing may initially appear more time-consuming, these experiences demonstrated how they can prevent more extensive troubleshooting later. I also learned that implementing a potential solution is only part of troubleshooting; verifying that the change resolves the issue without introducing additional problems is equally important. This has helped me develop a more deliberate and systematic approach to problem-solving, which I believe will remain valuable in system or network administration, where changes to one component can affect the reliability of other systems.
+            </p>
+
+            <h3>Collaboration, Communication, and Professional Decision-Making</h3>
+
+            <p>
+                Although much of my computer science coursework was completed independently, the program helped me better understand the importance of collaboration, communication, and organized decision-making in professional software development. Through courses designed to teach students how software projects are planned and executed, I was introduced to the ways development teams can divide responsibilities, establish priorities, respond to changing requirements, and evaluate progress throughout a project. These concepts reinforced the importance of maintaining clear documentation, communicating technical information effectively, and considering the needs of users and other stakeholders when making design decisions. Additionally, programming assignments and project documentation provided opportunities for me to explain technical concepts and present my work in ways that others could understand and evaluate, whether through code comments, formal documentation, or written reflections. My capstone code review and enhancement narratives have provided additional opportunities to practice these skills by requiring me to explain existing functionality, identify areas for improvement, and communicate the reasoning behind proposed changes.
+            </p>
+
+            <p>
+                My professional experience in emergency medical services has provided a different but equally valuable perspective on collaboration and organizational decision-making. As a clinical field supervisor, one of my recurring responsibilities involved coordinating staffing across multiple ambulance locations and shifts, often with limited personnel available. At the beginning of a shift, I would evaluate which ambulances were fully staffed, identify available personnel by qualification, and determine how to assemble additional crews while considering employee capabilities, familiarity with different service areas, and compatibility between partners. These decisions required anticipating how staffing changes would affect coverage throughout the day, evening, and overnight shifts. I frequently needed to redistribute personnel between locations, contact off-duty employees about additional shifts, and balance these responsibilities with my other supervisory duties. Before leaving, I would also meet with incoming dispatchers to explain staffing arrangements and ensure they understood which resources would be available. This experience reinforced the importance of evaluating competing priorities, anticipating the consequences of decisions, and communicating plans clearly to the people responsible for carrying them out. Although managing ambulance staffing differs from managing computer systems or software projects, I believe the underlying skills of resource allocation, coordination, and systematic problem-solving are highly transferable. Combined with the technical knowledge and development practices introduced throughout my degree program, these experiences have prepared me to contribute to collaborative IT environments and communicate effectively with colleagues, end users, and organizational stakeholders.
+            </p>
+
+            <h3>Problem-Solving, Technical Judgment, and Security</h3>
+
+            <p>
+                Throughout my computer science education, I have developed a greater appreciation for the importance of evaluating different approaches to solving technical problems rather than focusing exclusively on whether a particular solution works. Studying algorithms and data structures introduced me to concepts such as computational efficiency, data organization, and the tradeoffs involved in selecting different approaches. I was able to apply these principles during my Travlr Getaways capstone enhancements by implementing search and sorting functionality for the application&#x27;s trip records. This required considering how records would be filtered, how different data types should be compared during sorting, and how to preserve the original collection of records while presenting results to the user. Although the application was relatively small, the experience reinforced the importance of selecting solutions that are understandable, maintainable, and appropriate for the problem being addressed. It also demonstrated that technical decisions should account for both application functionality and the experience of the people using it.
+            </p>
+
+            <p>
+                My work with the Travlr application also strengthened my understanding of how software design and database management contribute to application reliability. Because the application incorporates multiple interconnected technologies, changes to one component sometimes required corresponding adjustments elsewhere. The database enhancement provided an opportunity to improve how trip records were validated, identified, and retrieved, including the use of Mongoose validation rules and a unique index for trip codes. These changes helped reinforce the importance of protecting data integrity and ensuring that database operations behave consistently. Similarly, implementing authenticated trip deletion required coordinating changes between the Angular administrative interface and the backend API. These experiences helped me recognize that maintaining an application involves more than adding individual features; it also requires understanding how different components interact, anticipating unintended consequences, and testing whether changes affect existing functionality.
+            </p>
+
+            <p>
+                Security has also become an increasingly important consideration in how I approach technical problems. Through coursework and my capstone enhancements, I have learned that protecting an application requires attention to authentication, authorization, input validation, and the ways information is accessed or modified. For example, when implementing trip deletion, I needed to ensure that the operation was protected by backend authentication and authorization rather than relying solely on controls within the user interface. The database enhancement also reinforced the importance of validating incoming data and preventing conflicting records from being created. These experiences helped me understand why security should be considered throughout the development process rather than added only after an application is complete. Although I still have much to learn about cybersecurity and infrastructure management, I believe developing this security-minded approach will be particularly valuable as I pursue system or network administration, where protecting systems, maintaining reliable services, and reducing unnecessary risks are essential responsibilities.
+            </p>
+
+            <h3>Introduction to the Capstone Artifacts</h3>
+
+            <p>
+                For my computer science capstone, I selected the Travlr Getaways application, originally developed during my Full Stack Development coursework, as the foundation for all three required enhancement categories. The application was built using the MEAN stack, incorporating MongoDB, Express, Angular, and Node.js to provide a travel-related website with administrative functionality for managing trip records. I chose this application because it was one of the most substantial projects I completed during my degree program and offered opportunities to demonstrate improvements across several areas of computer science. Rather than selecting three unrelated projects, I wanted to show how an existing application could be progressively improved through changes to its functionality, algorithms, and database operations. This approach also allowed me to revisit earlier work with a broader understanding of software engineering principles and consider how design decisions in one part of an application could affect other components.
+            </p>
+
+            <p>
+                The first enhancement, focusing on Software Design and Engineering, introduced authenticated trip deletion with a confirmation prompt and backend authorization, expanding the application&#x27;s administrative functionality while emphasizing secure design. The second enhancement, addressing Algorithms and Data Structures, added case-insensitive searching and multiple sorting options for trip records, improving how users could locate and organize information. The third enhancement, focusing on Databases, strengthened validation, indexing, and record identification to improve data integrity and the reliability of database operations. Together, these enhancements demonstrate my ability to examine an existing application, identify areas for improvement, implement changes across interconnected components, and test the results. The ePortfolio includes the original application, the enhanced versions, a recorded code review, and supporting narratives that explain the objectives, implementation decisions, and outcomes of each enhancement. Collectively, these materials provide evidence of my technical development throughout the program and illustrate the importance of maintainability, functionality, and security in software engineering.
+            </p>
+
+            <h3>Professional Readiness and Continued Development</h3>
+
+            <p>
+                As I approach the completion of my Bachelor of Science in Computer Science, I recognize how much my understanding of technology and the responsibilities of computing professionals has developed throughout the program. Although I entered with an existing interest in computers and some professional technical experience, my coursework has exposed me to new programming languages, development environments, problem-solving strategies, and software engineering practices. Perhaps more importantly, it has reinforced the value of approaching unfamiliar challenges systematically, researching potential solutions, testing changes carefully, and remaining willing to learn from mistakes. I believe these habits, combined with the communication, leadership, and organizational skills developed throughout my EMS career, will provide a valuable foundation as I pursue new opportunities in information technology.
+            </p>
+
+            <p>
+                Looking ahead, my primary professional goal is to transition into system or network administration, where I can apply my technical knowledge to maintaining, troubleshooting, and securing computer systems and infrastructure. I recognize that this career path will require additional practical experience and continued learning beyond my degree. To prepare, I intend to develop a home lab for hands-on experience with operating systems, server administration, and networking; strengthen my scripting abilities in Python and PowerShell; and pursue relevant industry certifications. While I still have areas in which I would like to improve, completing this program has given me a broader understanding of computing and greater confidence in my ability to approach technical challenges. I view my ePortfolio not only as a record of my academic accomplishments, but also as a starting point for continued professional development as I work toward establishing a career in IT.
+            </p>
+
+        </section>
+
+
 
 
         <section id="original-travlr">
