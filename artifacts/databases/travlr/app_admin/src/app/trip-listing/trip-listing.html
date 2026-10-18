@@ -1,0 +1,63 @@
+<!-- Trip management controls -->
+<div>
+    <button *ngIf="isLoggedIn()" (click)="addTrip()" class="btn btn-info">
+        Add Trip
+    </button>
+</div>
+
+<!-- Search and sort controls -->
+<div class="row mt-3">
+    <div class="col-md-6">
+        <label for="tripSearch" class="form-label">Search Trips</label>
+        <input
+            id="tripSearch"
+            type="text"
+            class="form-control"
+            [(ngModel)]="searchTerm"
+            (ngModelChange)="applyFiltersAndSort()"
+            placeholder="Search by name, resort, or trip code">
+    </div>
+
+    <div class="col-md-4">
+        <label for="tripSort" class="form-label">Sort Trips</label>
+        <select
+            id="tripSort"
+            class="form-select"
+            [(ngModel)]="sortOption"
+            (ngModelChange)="applyFiltersAndSort()">
+            <option value="original">Default</option>
+            <option value="name-asc">Name: A–Z</option>
+            <option value="name-desc">Name: Z–A</option>
+            <option value="price-asc">Price: Low–High</option>
+            <option value="price-desc">Price: High–Low</option>
+            <option value="date-asc">Start Date: Earliest–Latest</option>
+            <option value="date-desc">Start Date: Latest–Earliest</option>
+        </select>
+    </div>
+</div>
+
+<!-- Display the number of matching trips -->
+<div class="mt-2">
+    <small>
+        Showing {{ trips.length }} of {{ allTrips.length }} trips
+    </small>
+</div>
+
+<!-- Display a message when trips exist but none match the current search -->
+<div
+    *ngIf="trips.length === 0 && allTrips.length > 0"
+    class="alert alert-info mt-3">
+    No trips match the current search.
+</div>
+
+<!-- Display the current trip collection -->
+<div class="row">
+    <div *ngFor="let trip of trips" class="col-md-4">
+        <!-- Handle delete requests emitted by individual trip cards -->
+        <app-trip-card
+            [trip]="trip"
+            (deleteRequested)="deleteTrip($event)"
+            class="card-deck mt-2">
+        </app-trip-card>
+    </div>
+</div>

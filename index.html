@@ -28,18 +28,32 @@
             <h2>Portfolio</h2>
             <ul>
                 <li>Professional Self-Assessment — Coming Soon</li>
-                <li>Code Review — Available Below</li>
-                <li>Software Design and Engineering — Available Below</li>
+                
+		<li>
+    			<a href="#code-review">
+        			Code Review — Available Below
+    			</a>
+		</li>
+		<li>
+    			<a href="#software-design-engineering">
+        			Software Design and Engineering — Available Below
+    			</a>
+		</li>
+
                 <li>
                     <a href="#algorithms-data-structures">
                         Algorithms and Data Structures — Available Below
                     </a>
                 </li>
-                <li>Databases — Coming Soon</li>
+                <li>
+    			<a href="#databases">
+        			Databases — Available Below
+    			</a>
+		</li>
             </ul>
         </section>
 
-        <section>
+        <section id="code-review">
             <h2>Code Review</h2>
             <p>
                 This code review examines the original Travlr Getaways full-stack application and
@@ -68,7 +82,7 @@
             </p>
         </section>
 
-        <section>
+        <section id="software-design-engineering">
             <h2>Software Design and Engineering</h2>
 
             <h3>Travlr Getaways — Authenticated Delete Functionality</h3>
@@ -151,6 +165,65 @@
                    target="_blank"
                    rel="noopener noreferrer">
                     View the Algorithms and Data Structures Enhanced Artifact
+                </a>
+            </p>
+        </section>
+
+        <section id="databases">
+            <h2>Databases</h2>
+
+            <h3>Travlr Getaways — Database Validation and Integrity</h3>
+
+            <p>
+                For the Databases enhancement, I strengthened the data
+                integrity and reliability of the Travlr Getaways full-stack
+                application by improving its MongoDB and Mongoose
+                implementation. The enhancement focuses on schema validation,
+                database indexing, and more reliable record retrieval and
+                update operations.
+            </p>
+
+            <p>
+                The enhancement introduces stronger validation for trip
+                records, including trimming string values, normalizing trip
+                codes, and validating price information. A unique index
+                prevents duplicate trip codes, while an unnecessary index
+                on trip names was removed. I also replaced the individual-trip
+                lookup using find() with findOne() to retrieve a single
+                matching document and provide more accurate handling when
+                a trip does not exist.
+            </p>
+
+            <p>
+                Additional improvements ensure that schema validation is
+                enforced during updates and that administrators receive
+                useful error messages when database operations fail.
+                The editing process was also adjusted to preserve the
+                original trip code when identifying a record, allowing
+                proposed code changes to be checked correctly against
+                the database's uniqueness constraint.
+            </p>
+
+            <p>
+                This enhancement demonstrates the importance of database
+                constraints, consistent validation, and reliable communication
+                between the database, API, and administrative interface.
+                Together, these changes improve data integrity and
+                maintainability while preserving the existing MEAN-stack
+                application architecture.
+            </p>
+
+            <p>
+                <a href="artifacts/databases/databases-narrative.docx">
+                    View the Databases Enhancement Narrative
+                </a>
+            </p>
+
+            <p>
+                <a href="https://github.com/dev-tn-official/dev-tn-official.github.io/tree/main/artifacts/databases/travlr"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    View the Databases Enhanced Artifact
                 </a>
             </p>
         </section>
